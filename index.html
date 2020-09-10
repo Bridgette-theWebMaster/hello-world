@@ -21,25 +21,21 @@
       <br />
       <section id="works"></section>
       <br />
-      <section id="Contact-section">
-        <p>My contact information:</p>
-        <address id="Contact-info"></address>
-      </section>
+      <section id="Contact-section"></section>
     </main>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-      /*  function Title(props) {
-          console.log(props);
-          return <header>{props.children}</header>;
-        }
-        ReactDOM.render(
-          <Title className="title">
-              const image=(<img src={`https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg`});
-          </Title>,
-          document.querySelector("#img")
-        );*/
+      function Title(props) {
+        return <div>{props.children}</div>;
+      }
+      ReactDOM.render(
+        <Title className="title">
+          <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg" />
+        </Title>,
+        document.querySelector("#img")
+      );
 
       function Intro(props) {
         return <section>{props.children}</section>;
@@ -95,19 +91,22 @@
       }
       ReactDOM.render(
         <Contact className="contact">
-          <p>My name is Sally</p>
-          <p>
-            My email is:
-            <a href={"mailto://sally@IntenetExplorer.old"}>
-              sally@IntenetExplorer.old
-            </a>
-          </p>
-          <p>
-            My phone number is:{" "}
-            <a href={"tel:+34100572415"}>+34 100 57 24 15</a>
-          </p>
+          <p>My contact information:</p>
+          <address id="Contact-info">
+            <p>My name is Sally</p>
+            <p>
+              My email is:
+              <a href={"mailto://sally@IntenetExplorer.old"}>
+                sally@IntenetExplorer.old
+              </a>
+            </p>
+            <p>
+              My phone number is:{" "}
+              <a href={"tel:+34100572415"}>+34 100 57 24 15</a>
+            </p>
+          </address>
         </Contact>,
-        document.querySelector("#Contact-info")
+        document.querySelector("#Contact-section")
       );
     </script>
   </body>
